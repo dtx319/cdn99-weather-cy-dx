@@ -4,25 +4,36 @@ function getWeather(city) {
         .then((data) => console.log(data))
 }
 
-function mainWeather(data, type) {
-    console.log(data.MRData.StandingsTable.StandingsLists[0].DriverStandings)
+function tempConvert(temp) {
+    return (temp - 273.15) * 1.8 + 32
+}
 
+function mainWeather(data, type) {
     console.log(data)
 
-    for (i of data.MRData.StandingsTable.StandingsLists[0].DriverStandings) {
+    for (i of data) {
 
         if (i.type == type || type == undefined) {
 
-            let racerPosition = i.position
-            let racerName = i.Driver.givenName + i.Driver.familyName
-            let racerCar = i.Constructors[0].name
+            let weatherMain = i.weather[0].main
+            let weatherDescription = i.weather[0].description
 
-            let clone = myTemplate.content.cloneNode(true); 
-            let td = clone.querySelectorAll('td') 
+            let weatherFeelsLike = tempConvert(i.main.feels_like)
+            let weatherHumidity = i.main.humidity
+            let weatherPressure = i.main.pressure 
+            let weatherTemp = tempConvert(i.main.temp)
+            let weatherTempMax = tempConvert(i.main.temp_max)
+            let weatherTempMin = tempConvert(i.main.temp_min)
 
-            td[0].textContent = racerPosition
-            td[1].textContent = racerName
-            td[2].textContent = racerCar
+            td[0].textContent = weatherMain
+            td[1].textContent = weatherDescription
+ 
+            td[2].textContent = weatherFeelsLike
+            td[3].textContent = weatherHumidity
+            td[4].textContent = weatherPressure
+            td[5].textContent = weatherTemp
+            td[6].textContent = weatherTempMax
+            td[7].textContent = weatherTempMin
 
             tableBody.appendChild(clone);
         }
