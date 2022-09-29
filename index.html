@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+
+    <div id="formDiv">
+        <p>What's the weather like?</p>
+
+        <form action="/action" id="form" method="post">
+            <div class="entryPoints">
+                <div class="formGroup">
+                    <label for="">Name a city: </label>
+                    <input type="text" id="typeId" name="city">
+                </div>
+            </div>
+            <div class="buttonDiv">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <td>Event Title</td>
+                    <td>Performer</td>
+                    <td>Time of performance</td>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+
+
+        <template id="myTemplate">
+            <tr>
+                <td id="titleId"></td>
+                <td id="formerId"></td>
+                <td id="timeId"></td>
+            </tr>
+        </template>
+
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
