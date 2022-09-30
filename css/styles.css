@@ -1,0 +1,151 @@
+@import "https://fonts.googleapis.com/css?family=Lato:100";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+.b{
+    font-size: 10px;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+.big{
+    font-size: 40px;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+
+section{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(-45deg, #7d2b12, #9b1a4c, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 15s ease-in-out infinite;
+}
+
+h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 3px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5rem 10rem;
+    animation: fadeIn 3s;
+}
+
+@keyframes change{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.cap{
+    text-transform: capitalize;
+}
+
+/* * {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://coffee.alexflipnote.dev/1sCVy1v6y8w_coffee.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#formDiv {
+    margin: 50px auto;
+    background-color: rgba(150,150,150,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border-radius: 25px;
+}
+
+label {
+    display: inline-block;
+    width: 46px;
+}
+
+input {
+    display: inline-block;
+    width: calc(100% - 53px);
+    background-color: rgba(150, 50, 50, 0.0);
+    border-color: white;
+    border-radius: 10px;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+button {
+    min-width: 300px;
+    justify-content: center;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: white;
+    background-color:rgba(150, 50, 50, 0);
+    color: white;
+    margin: 10px;
+}
+
+#resultsTable {
+    margin-top: 25px;
+    background-color: rgba(150, 50, 50, 0.4);
+}
+
+#form {
+    background-color: rgba(150, 50, 50, 0.4);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+input {
+    margin: 10px;
+}
+
+td {
+    border-style: solid;
+    border-color: rgb(247, 240, 240, 0.8);
+    color: white;
+}
+
+a {
+    color: white;
+} */
